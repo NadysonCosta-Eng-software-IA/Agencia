@@ -114,3 +114,47 @@ footer {
 /* ======================= */
 /* CHATBOT AQUI*/
 /* ======================= */
+
+.chat-toggle{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--azul-claro);
+    color: var(--branco);
+    border: none;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+}
+
+.chat-widget{
+    position: fixed;
+    bottom: 85px;
+    right: 20px;
+    width: 280px;
+    background: var(--branco);
+    border: 2px solid var(--azul);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* .hidden{
+    display: none;
+} */
+
+.chat-header{
+    background: var(--azul);
+    color: var(--branco);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.chat-header button{
+    background: none;
+    border: none;
+    color: var(--branco);
+    cursor: pointer;
+}
