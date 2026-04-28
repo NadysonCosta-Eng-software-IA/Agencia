@@ -112,10 +112,9 @@ footer {
 }
 
 /* ======================= */
-/* CHATBOT AQUI*/
-/* ======================= */
+/* CHATBOT */
 
-.chat-toggle{
+.chat-toggle {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -128,7 +127,7 @@ footer {
     cursor: pointer;
 }
 
-.chat-widget{
+.chat-widget {
     position: fixed;
     bottom: 85px;
     right: 20px;
@@ -140,11 +139,11 @@ footer {
     flex-direction: column;
 }
 
-/* .hidden{
+.hidden {
     display: none;
-} */
+}
 
-.chat-header{
+.chat-header {
     background: var(--azul);
     color: var(--branco);
     padding: 10px;
@@ -152,9 +151,51 @@ footer {
     justify-content: space-between;
 }
 
-.chat-header button{
+.chat-header button {
     background: none;
     border: none;
     color: var(--branco);
     cursor: pointer;
 }
+
+.chat-box {
+    padding: 10px;
+    height: 200px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.usuario {
+    align-self: flex-end;
+    background: var(--azul-claro);
+    color: var(--branco);
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.bot {
+    align-self: flex-start;
+    background: var(--cinza);
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.chat-input-area {
+    display: flex;
+    border: 1px solid #ddd;
+}
+
+.chat-input-area input {
+    flex: 1;
+    padding: 8px;
+}
+
+.chat-input-area button {
+    background: var(--azul);
+    color: var(--branco);
+    border: none;
+    padding: 8px 12px;
+}
+

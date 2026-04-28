@@ -1,64 +1,52 @@
-// console.log("olá mundo!");
+// =====================================
+// AULA 2 – EVENTOS
+// =====================================
 
-// //Console (mensagem no console)
+let botaoWhats = document.querySelector(".btn-whatsapp");
+let servicos = document.querySelectorAll(".servico");
+console.log("Lista de serviços: ", servicos);
 
-// console.log("JavaScript conectado com sucesso!");
+console.log("Primeiro serviço: ", servicos[0]);
+console.log("Segundo serviço: ", servicos[1]);
 
+function mostrarMensagem(){
+    alert("Você clicou em um serviço!");
+}
 
-// // Alert (mensagem na tela)
-// alert("Bem vindo ao site da Agência Criativa");
-
-// // Prompt (entrada de usuário)
-// //prompt("qual o seu nome?");
-
-// // variaveis let, const = , var="nadyson"
- let NomeUsuario = prompt("qual seu nome");
- let mensagem = "prazer "+ NomeUsuario +" seja bem vindo à Angência Criativa";
-// alert(mensagem)
-
-//================================
-// manipulando o DOM
-//================================
-
-// Selecionar titulo principal
-let titulo = document.querySelector(".hero h2");
- 
-// alerta texto com base no usuario
-titulo.innerText = mensagem
-
-//Altera o estilo com js
-document.body.style.background = "yellow";
-
-//1. getElementById
-let botao = document.getElementById("chat-toggle");
-console.log("Botao do chat:", botao);
-
-//altera a cor
-botao.style.background="limon"
+let primeiroServico = document.querySelector(".servico");
+primeiroServico.addEventListener("click", mostrarMensagem);
 
 
 
-//2 getElementByClassName
+botaoWhats.addEventListener("click", function (e){
+    e.preventDefault();
+    alert("Você será redirecionado para o WhathsApp!");
+    window.open("https://wa.me/5586994517396","_blank");
+});
 
-let listaServicos = document.getElementsByClassName("servico");
-console.log("Lista de serviços: ",listaServicos);
+servicos.forEach(function(servico){
+    servicos.addEventListener("click", function(){
+        let tituloServico = servico.querySelector("h3").innerText;
+        alert("Clicou em um serviço");
+    });
+});
 
-//acessar o primeiro item
-listaServicos[0].style.background="green";
-listaServicos[1].style.background="red";
-listaServicos[2].style.background="blue";
+servicos.forEach(function(servico){
+    servicos.addEventListener("mouseenter", function(){
+        servico.style.background = "yellow"
+       
+    });
+     servicos.addEventListener("mouseleave", function(){
+        servico.style.background = "#e6e6e6"
+    });
+});
 
-//3 getElementsByTagName
-let titulos = document.getElementsByTagName("h3");
-console.log("todos os titulos h3: ", titulos);
+servicos.forEach(function(servico){
+    servicos.addEventListener("dblclick", function(){
+        alert("Duplo clique detectado!");
+    });
+});
 
-//alterar texto do primeiro
-titulos[0].innerText = "Serviço Alterado com JS"
-
-//4 querySelector especifico
-let tituloServico = document.querySelector(".servico h3");
-console.log("Titulo do serviço: ", tituloServico);
-
-
-//altera cor do texto
-tituloServico.style.color ="red"
+document.addEventListener("keydown", function(e){
+    console.log("Tecla pressionada: ", e.key);
+});
